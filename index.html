@@ -15,10 +15,11 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <!-- Thème de base (inchangé) -->
     <link href="css/styles.css" rel="stylesheet" />
-    <!-- Compléments pour les nouvelles sections -->
+    <!-- Thème sombre (surcharge) -->
     <link href="css/custom.css" rel="stylesheet" />
 </head>
 
@@ -44,11 +45,10 @@
 </nav>
 
 <!-- Masthead -->
-<!-- Image à ajouter : assets/img/bg-masthead.jpg (photo/illustration réseaux, salle serveurs, poste de travail...) -->
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="text-center">
-            <span class="status-pill">Recherche de stage — Technicien de maintenance informatique</span>
+            <span class="status-pill"><span class="status-dot"></span>Recherche de stage — Technicien de maintenance informatique</span>
             <h1 class="mx-auto my-0 text-uppercase">Zakaria Boulgarne</h1>
             <h2 class="text-white-50 mx-auto mt-2 mb-5">
                 Étudiant en BTS SIO (Services Informatiques aux Organisations)<br>
@@ -67,8 +67,8 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8">
-                <h2 class="text-white mb-4">Profil</h2>
-                <p class="text-white-50">
+                <h2 class="section-heading">Profil</h2>
+                <p>
                     Étudiant en BTS SIO, passionné par la maintenance informatique et les réseaux.
                     Curieux, rigoureux et autonome, je souhaite effectuer un stage en maintenance
                     informatique afin de développer mes compétences en support utilisateur,
@@ -88,9 +88,9 @@
 
 <!-- Formation -->
 <section class="formation-section" id="formation">
-    <div class="container px-4 px-lg-5">
-        <h2 class="text-center mb-5">Formation</h2>
-        <div class="timeline">
+    <div class="container px-4 px-lg-5 text-center">
+        <h2 class="section-heading">Formation</h2>
+        <div class="timeline text-start">
 
             <div class="timeline-item current">
                 <span class="timeline-dates">2025 — 2027</span>
@@ -116,128 +116,98 @@
 </section>
 
 <!-- Compétences -->
-<section class="projects-section bg-light" id="projects">
-    <div class="container px-4 px-lg-5">
+<section class="skills-section" id="projects">
+    <div class="container px-4 px-lg-5 text-center">
+        <h2 class="section-heading">Compétences</h2>
 
-        <div class="row gx-0 mb-5 align-items-center">
-            <div class="col-lg-12">
-                <div class="featured-text text-center">
-                    <h4>Compétences techniques</h4>
-                    <div class="row justify-content-center mt-4">
-                        <div class="col-md-4 skill-block">
-                            <h5>Maintenance &amp; support</h5>
-                            <ul>
-                                <li>Installation et configuration de postes Windows</li>
-                                <li>Diagnostic de pannes matérielles et logicielles</li>
-                                <li>Assistance aux utilisateurs</li>
-                                <li>Réinstallation système, sauvegarde et restauration</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 skill-block">
-                            <h5>Systèmes &amp; réseaux</h5>
-                            <ul>
-                                <li>Windows / bases Linux</li>
-                                <li>Notions réseau : TCP/IP, DHCP, DNS</li>
-                                <li>Branchement et test réseau</li>
-                                <li>Sensibilisation à la cybersécurité (mots de passe, mises à jour, antivirus)</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 skill-block">
-                            <h5>Outils</h5>
-                            <ul>
-                                <li>Visual Studio Code</li>
-                                <li>Suite Microsoft Office</li>
-                                <li>Environnements Windows &amp; Linux</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="skill-panel">
+                    <h5>Maintenance &amp; support</h5>
+                    <ul>
+                        <li>Installation et configuration de postes Windows</li>
+                        <li>Diagnostic de pannes matérielles et logicielles</li>
+                        <li>Assistance aux utilisateurs</li>
+                        <li>Réinstallation système, sauvegarde et restauration</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-panel">
+                    <h5>Systèmes &amp; réseaux</h5>
+                    <ul>
+                        <li>Windows / bases Linux</li>
+                        <li>Notions réseau : TCP/IP, DHCP, DNS</li>
+                        <li>Branchement et test réseau</li>
+                        <li>Sensibilisation à la cybersécurité (mots de passe, mises à jour, antivirus)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-panel">
+                    <h5>Outils</h5>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Suite Microsoft Office</li>
+                        <li>Environnements Windows &amp; Linux</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="row gx-0 mb-5 justify-content-center">
-            <div class="col-lg-8">
-                <div class="bg-black text-center h-100 project">
-                    <div class="project-text w-100 my-auto text-center">
-                        <h4 class="text-white">Langues</h4>
-                        <p class="text-white-50">
-                            Français : Courant<br>
-                            Anglais : B2<br>
-                            Italien : C1<br>
-                            Espagnol : B1
-                        </p>
-                    </div>
-                </div>
+        <div class="info-block">
+            <h5>Langues</h5>
+            <div class="tag-row mb-4">
+                <span class="tag"><strong>Français</strong> — Courant</span>
+                <span class="tag"><strong>Anglais</strong> — B2</span>
+                <span class="tag"><strong>Italien</strong> — C1</span>
+                <span class="tag"><strong>Espagnol</strong> — B1</span>
             </div>
         </div>
 
-        <div class="row gx-0 mb-5 justify-content-center">
-            <div class="col-lg-8">
-                <div class="bg-dark text-center h-100 project">
-                    <div class="project-text w-100 my-auto text-center">
-                        <h4 class="text-white">Qualités professionnelles</h4>
-                        <p class="text-white-50">
-                            Sens du service<br>
-                            Autonomie<br>
-                            Rigueur<br>
-                            Bonne gestion des priorités<br>
-                            Capacité d'adaptation<br>
-                            Travail en équipe (football niveau régional R2)
-                        </p>
-                    </div>
-                </div>
+        <div class="info-block">
+            <h5>Qualités professionnelles</h5>
+            <div class="tag-row mb-4">
+                <span class="tag">Sens du service</span>
+                <span class="tag">Autonomie</span>
+                <span class="tag">Rigueur</span>
+                <span class="tag">Bonne gestion des priorités</span>
+                <span class="tag">Capacité d'adaptation</span>
+                <span class="tag">Travail en équipe (football R2)</span>
             </div>
         </div>
 
-        <div class="row gx-0 justify-content-center">
-            <div class="col-lg-8">
-                <div class="bg-black text-center h-100 project">
-                    <div class="project-text w-100 my-auto text-center">
-                        <h4 class="text-white">Centres d'intérêt</h4>
-                        <p class="text-white-50">
-                            Maintenance informatique &amp; réseaux<br>
-                            Veille technologique (IT, cybersécurité)<br>
-                            Football en compétition (R2 — esprit d'équipe)
-                        </p>
-                    </div>
-                </div>
+        <div class="info-block">
+            <h5>Centres d'intérêt</h5>
+            <div class="tag-row">
+                <span class="tag">Maintenance informatique &amp; réseaux</span>
+                <span class="tag">Veille technologique (IT, cybersécurité)</span>
+                <span class="tag">Football en compétition (R2)</span>
             </div>
         </div>
-
     </div>
 </section>
 
 <!-- Expériences -->
-<section class="projects-section" id="experiences">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-0 justify-content-center">
-            <div class="col-lg-8">
-                <div class="bg-black text-center h-100 project">
-                    <div class="project-text w-100 my-auto">
-                        <h4 class="text-white text-center mb-4">Expériences</h4>
-                        <ul class="experience-list">
-                            <li>Créateur de sites indépendant — 2 ans</li>
-                            <li>Support informatique &amp; projets personnels — 2 ans</li>
-                            <li>Assistance technique auprès de clients et utilisateurs</li>
-                            <li>Résolution de problèmes logiciels</li>
-                            <li>Gestion de projets informatiques, de la conception à la mise en ligne</li>
-                            <li>Relation client et support utilisateur</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="experience-section" id="experiences">
+    <div class="container px-4 px-lg-5 text-center">
+        <h2 class="section-heading">Expériences</h2>
+        <ul class="experience-list">
+            <li>Créateur de sites indépendant — 2 ans</li>
+            <li>Support informatique &amp; projets personnels — 2 ans</li>
+            <li>Assistance technique auprès de clients et utilisateurs</li>
+            <li>Résolution de problèmes logiciels</li>
+            <li>Gestion de projets informatiques, de la conception à la mise en ligne</li>
+            <li>Relation client et support utilisateur</li>
+        </ul>
         <!--
-          Si tu as effectué un stage précis (entreprise, dates, missions),
-          ajoute ici un bloc "project" supplémentaire de la même façon,
-          avec le nom de l'entreprise, les dates et 3-4 missions réalisées.
-          Une capture d'écran ou un logo peut être placé dans assets/img/.
+          Si tu as un stage précis à ajouter (entreprise, dates, missions),
+          donne-moi les infos et j'ajoute un bloc dédié ici, dans le même style.
         -->
     </div>
 </section>
 
-<!-- Signup / CTA -->
-<!-- Image à ajouter : assets/img/bg-signup.jpg (photo liée à l'informatique/réseaux) -->
+<!-- CTA contact -->
 <section class="signup-section" id="signup">
     <div class="container px-4 px-lg-5 text-center">
         <div class="row justify-content-center">
@@ -258,10 +228,10 @@
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <i class="fas fa-map-marked-alt mb-2"></i>
                         <h4 class="text-uppercase m-0">Adresse</h4>
                         <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">20 rue des Fabriques, Melun</div>
+                        <div class="small">20 rue des Fabriques, Melun</div>
                     </div>
                 </div>
             </div>
@@ -269,10 +239,10 @@
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <i class="fas fa-envelope mb-2"></i>
                         <h4 class="text-uppercase m-0">E-mail</h4>
                         <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">
+                        <div class="small">
                             <a href="mailto:zakariaboulgarne@gmail.com">zakariaboulgarne@gmail.com</a>
                         </div>
                     </div>
@@ -282,17 +252,17 @@
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <i class="fas fa-mobile-alt mb-2"></i>
                         <h4 class="text-uppercase m-0">Téléphone</h4>
                         <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">07 79 55 41 34</div>
+                        <div class="small">07 79 55 41 34</div>
                     </div>
                 </div>
             </div>
 
         </div>
         <div class="row justify-content-center mt-4">
-            <div class="col-md-4 text-center text-black-50 small">
+            <div class="col-md-4 text-center small">
                 <i class="fas fa-car me-1"></i> Permis : en cours
             </div>
         </div>
@@ -300,7 +270,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer bg-black small text-center text-white-50">
+<footer class="footer small text-center">
     <div class="container px-4 px-lg-5">
         © 2026 – Zakaria Boulgarne
     </div>
