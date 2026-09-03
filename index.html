@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Portfolio de Zakaria Boulgarne, étudiant en BTS SIO — à la recherche d'un stage en maintenance informatique et réseaux." />
+    <meta name="description" content="Portfolio de Zakaria Boulgarne - BTS Cybersécurité" />
     <meta name="author" content="Zakaria Boulgarne" />
-    <title>Zakaria Boulgarne | Portfolio — Maintenance informatique &amp; réseaux</title>
+    <title>Zakaria Boulgarne | Portfolio</title>
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
@@ -15,12 +15,21 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Thème de base (inchangé) -->
+    <!-- Core theme CSS -->
     <link href="css/styles.css" rel="stylesheet" />
-    <!-- Thème sombre (surcharge) -->
-    <link href="css/custom.css" rel="stylesheet" />
+
+    <style>
+        /* Supprime toutes les images */
+        img {
+            display: none !important;
+        }
+
+        /* Remplace le fond image du header */
+        .masthead {
+            background: #000 !important;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -35,9 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#about">Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#formation">Formation</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Compétences</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experiences">Expériences</a></li>
                 <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
             </ul>
         </div>
@@ -48,229 +55,106 @@
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="text-center">
-            <span class="status-pill"><span class="status-dot"></span>Recherche de stage — Technicien de maintenance informatique</span>
             <h1 class="mx-auto my-0 text-uppercase">Zakaria Boulgarne</h1>
             <h2 class="text-white-50 mx-auto mt-2 mb-5">
-                Étudiant en BTS SIO (Services Informatiques aux Organisations)<br>
-                Maintenance, systèmes &amp; réseaux
+                Étudiant en BTS Cybersécurité, Informatique et Réseaux<br>
+                Option Électronique et Réseaux
             </h2>
-            <a class="btn btn-primary me-2" href="#about">Découvrir mon profil</a>
-            <a class="btn btn-outline-light" href="assets/docs/CV_Boulgarne_Zakaria.pdf" target="_blank" rel="noopener">
-                <i class="fas fa-download me-1"></i> Télécharger mon CV
-            </a>
+            <a class="btn btn-primary" href="#about">Découvrir mon profil</a>
         </div>
     </div>
 </header>
 
-<!-- About / Profil -->
+<!-- About -->
 <section class="about-section text-center" id="about">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8">
-                <h2 class="section-heading">Profil</h2>
-                <p>
-                    Étudiant en BTS SIO, passionné par la maintenance informatique et les réseaux.
-                    Curieux, rigoureux et autonome, je souhaite effectuer un stage en maintenance
-                    informatique afin de développer mes compétences en support utilisateur,
-                    installation de postes et diagnostic de pannes au sein d'un environnement professionnel.
+                <h2 class="text-white mb-4">À propos de moi</h2>
+                <p class="text-white-50">
+                    Passionné par l’informatique et les nouvelles technologies, je m’intéresse
+                    particulièrement aux systèmes informatiques, aux réseaux et à la cybersécurité.
+                    Autodidacte et rigoureux, j’ai développé mes compétences à travers mes formations
+                    en BTS SIO puis en BTS CIEL, ainsi que par des projets personnels
+                    (création de sites web, bots, scripts).
                     <br><br>
-                    Mon parcours m'a permis de développer mes compétences à travers mes formations en
-                    BTS CIEL (Cybersécurité informatique, électronique et réseaux) puis en BTS SIO,
-                    ainsi que par des projets personnels de création de sites, de bots et de scripts.
-                    <br><br>
-                    La pratique du football à niveau régional (R2) m'a par ailleurs permis de développer
-                    un fort esprit d'équipe, de la discipline et une excellente capacité d'adaptation.
+                    La pratique du football à niveau régional m’a permis de développer
+                    un fort esprit d’équipe, de la discipline et une excellente capacité d’adaptation.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Formation -->
-<section class="formation-section" id="formation">
-    <div class="container px-4 px-lg-5 text-center">
-        <h2 class="section-heading">Formation</h2>
-        <div class="timeline text-start">
-
-            <div class="timeline-item current">
-                <span class="timeline-dates">2025 — 2027</span>
-                <span class="badge-current">En cours</span>
-                <h4>Première année BTS SIO — Services Informatiques aux Organisations</h4>
-                <span class="timeline-place">Lycée Léonard de Vinci, Melun (77000)</span>
-            </div>
-
-            <div class="timeline-item">
-                <span class="timeline-dates">2024 — 2025</span>
-                <h4>Première année BTS CIEL — Cybersécurité informatique, électronique et réseaux</h4>
-                <span class="timeline-place">Lycée professionnel Galilée, Paris 13e</span>
-            </div>
-
-            <div class="timeline-item">
-                <span class="timeline-dates">2023 — 2024</span>
-                <h4>Baccalauréat général — Option SES, Mathématiques</h4>
-                <span class="timeline-place">Lycée Jacques Amyot, Melun</span>
-            </div>
-
-        </div>
-    </div>
-</section>
-
 <!-- Compétences -->
-<section class="skills-section" id="projects">
-    <div class="container px-4 px-lg-5 text-center">
-        <h2 class="section-heading">Compétences</h2>
+<section class="projects-section bg-light" id="projects">
+    <div class="container px-4 px-lg-5">
 
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-                <div class="skill-panel">
-                    <h5>Maintenance &amp; support</h5>
-                    <ul>
-                        <li>Installation et configuration de postes Windows</li>
-                        <li>Diagnostic de pannes matérielles et logicielles</li>
-                        <li>Assistance aux utilisateurs</li>
-                        <li>Réinstallation système, sauvegarde et restauration</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="skill-panel">
-                    <h5>Systèmes &amp; réseaux</h5>
-                    <ul>
-                        <li>Windows / bases Linux</li>
-                        <li>Notions réseau : TCP/IP, DHCP, DNS</li>
-                        <li>Branchement et test réseau</li>
-                        <li>Sensibilisation à la cybersécurité (mots de passe, mises à jour, antivirus)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="skill-panel">
-                    <h5>Outils</h5>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>Suite Microsoft Office</li>
-                        <li>Environnements Windows &amp; Linux</li>
-                    </ul>
+        <div class="row gx-0 mb-5 align-items-center">
+            <div class="col-lg-12">
+                <div class="featured-text text-center">
+                    <h4>Compétences techniques</h4>
+                    <p class="text-black-50">
+                        HTML • CSS • JavaScript<br>
+                        Visual Studio Code<br>
+                        Windows<br>
+                        Word • Excel • PowerPoint<br>
+                        Canva
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="info-block">
-            <h5>Langues</h5>
-            <div class="tag-row mb-4">
-                <span class="tag"><strong>Français</strong> — Courant</span>
-                <span class="tag"><strong>Anglais</strong> — B2</span>
-                <span class="tag"><strong>Italien</strong> — C1</span>
-                <span class="tag"><strong>Espagnol</strong> — B1</span>
-            </div>
-        </div>
-
-        <div class="info-block">
-            <h5>Qualités professionnelles</h5>
-            <div class="tag-row mb-4">
-                <span class="tag">Sens du service</span>
-                <span class="tag">Autonomie</span>
-                <span class="tag">Rigueur</span>
-                <span class="tag">Bonne gestion des priorités</span>
-                <span class="tag">Capacité d'adaptation</span>
-                <span class="tag">Travail en équipe (football R2)</span>
-            </div>
-        </div>
-
-        <div class="info-block">
-            <h5>Centres d'intérêt</h5>
-            <div class="tag-row">
-                <span class="tag">Maintenance informatique &amp; réseaux</span>
-                <span class="tag">Veille technologique (IT, cybersécurité)</span>
-                <span class="tag">Football en compétition (R2)</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Expériences -->
-<section class="experience-section" id="experiences">
-    <div class="container px-4 px-lg-5 text-center">
-        <h2 class="section-heading">Expériences</h2>
-        <ul class="experience-list">
-            <li>Créateur de sites indépendant — 2 ans</li>
-            <li>Support informatique &amp; projets personnels — 2 ans</li>
-            <li>Assistance technique auprès de clients et utilisateurs</li>
-            <li>Résolution de problèmes logiciels</li>
-            <li>Gestion de projets informatiques, de la conception à la mise en ligne</li>
-            <li>Relation client et support utilisateur</li>
-        </ul>
-        <!--
-          Si tu as un stage précis à ajouter (entreprise, dates, missions),
-          donne-moi les infos et j'ajoute un bloc dédié ici, dans le même style.
-        -->
-    </div>
-</section>
-
-<!-- CTA contact -->
-<section class="signup-section" id="signup">
-    <div class="container px-4 px-lg-5 text-center">
-        <div class="row justify-content-center">
+        <div class="row gx-0 mb-5 justify-content-center">
             <div class="col-lg-8">
-                <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                <h2 class="text-white mb-5">Discutons de votre besoin en stage</h2>
-                <a class="btn btn-primary" href="mailto:zakariaboulgarne@gmail.com">Me contacter par e-mail</a>
+                <div class="bg-black text-center h-100 project">
+                    <div class="project-text w-100 my-auto text-center">
+                        <h4 class="text-white">Langues</h4>
+                        <p class="text-white-50">
+                            Français : Natif<br>
+                            Anglais : B2<br>
+                            Espagnol : B1<br>
+                            Italien : C1
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="row gx-0 justify-content-center">
+            <div class="col-lg-8">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="project-text w-100 my-auto text-center">
+                        <h4 class="text-white">Qualités professionnelles</h4>
+                        <p class="text-white-50">
+                            Travail en équipe (Football niveau régional R2)<br>
+                            Rigueur<br>
+                            Autonomie<br>
+                            Curiosité<br>
+                            Réactivité
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
 <!-- Contact -->
-<section class="contact-section">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-map-marked-alt mb-2"></i>
-                        <h4 class="text-uppercase m-0">Adresse</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small">20 rue des Fabriques, Melun</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-envelope mb-2"></i>
-                        <h4 class="text-uppercase m-0">E-mail</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small">
-                            <a href="mailto:zakariaboulgarne@gmail.com">zakariaboulgarne@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-mobile-alt mb-2"></i>
-                        <h4 class="text-uppercase m-0">Téléphone</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small">07 79 55 41 34</div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-4 text-center small">
-                <i class="fas fa-car me-1"></i> Permis : en cours
-            </div>
-        </div>
+<section class="signup-section" id="signup">
+    <div class="container px-4 px-lg-5 text-center">
+        <h2 class="text-white mb-5">Contact</h2>
+        <p class="text-white-50">
+            📍 Melun / Paris<br>
+            📧 zakariaboulgarne@gmail.com<br>
+            ☎️ 07 79 55 41 34
+        </p>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer small text-center">
+<footer class="footer bg-black small text-center text-white-50">
     <div class="container px-4 px-lg-5">
         © 2026 – Zakaria Boulgarne
     </div>
