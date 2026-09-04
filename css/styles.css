@@ -11201,3 +11201,260 @@ body {
 .footer {
   padding: 5rem 0;
 }
+/* =========================================================
+   CV - VERSION IDENTIQUE AU DOCUMENT
+   ========================================================= */
+
+.cv-document {
+    width: 100%;
+    max-width: 1050px;
+    margin: 80px auto 0;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 36% 64%;
+    min-height: 1000px;
+    color: #333;
+    font-family: "Nunito", sans-serif;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= COLONNE GAUCHE ================= */
+
+.cv-left {
+    background: #eeeeee;
+    padding: 38px 28px;
+}
+
+.cv-left-section {
+    margin-bottom: 28px;
+}
+
+.cv-left-title,
+.cv-right-title {
+    color: #6f797a;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    position: relative;
+}
+
+.cv-left-title::after,
+.cv-right-title::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 5px;
+    background: #737d7e;
+    margin-top: 8px;
+}
+
+.cv-left ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.cv-left li {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 5px;
+    color: #414141;
+}
+
+.cv-left-subtitle {
+    font-size: 13px;
+    text-decoration: underline;
+    margin: -8px 0 13px;
+    color: #3d3d3d;
+}
+
+/* ================= CONTACT ================= */
+
+.cv-contact {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.cv-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 11px;
+}
+
+.cv-contact i {
+    width: 18px;
+    height: 18px;
+    background: #555;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    flex-shrink: 0;
+}
+
+.cv-contact span {
+    font-size: 12px;
+}
+
+/* ================= COLONNE DROITE ================= */
+
+.cv-right {
+    background: #ffffff;
+    padding: 35px 30px 40px;
+}
+
+.cv-name {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: #050505;
+    letter-spacing: 1px;
+    margin: 0 0 22px;
+}
+
+.cv-right-section {
+    margin-bottom: 28px;
+}
+
+.cv-right-title {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.cv-right-title::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cv-formation-item {
+    margin-bottom: 17px;
+}
+
+.cv-formation-item strong {
+    font-size: 13px;
+    font-weight: 800;
+    color: #202020;
+    line-height: 1.5;
+}
+
+.cv-formation-item p {
+    font-size: 12px;
+    margin: 4px 0;
+    line-height: 1.4;
+    color: #454545;
+}
+
+.cv-formation-item .cv-school {
+    color: #777;
+}
+
+/* ================= EXPERIENCES ================= */
+
+.cv-experiences {
+    padding-left: 17px;
+    margin: 0;
+}
+
+.cv-experiences li {
+    font-size: 12px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* ================= PROFIL ================= */
+
+.cv-profile {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #333;
+    text-align: justify;
+    margin: 0;
+}
+
+/* ================= PERSONNELLES ================= */
+
+.cv-personal {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.cv-personal li {
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 4px;
+}
+
+/* ================= LANGUES ================= */
+
+.cv-languages {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.cv-languages li {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+/* ================= PERMIS ================= */
+
+.cv-permis {
+    font-size: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .cv-document {
+        display: block;
+        margin-top: 40px;
+        width: 95%;
+    }
+
+    .cv-left,
+    .cv-right {
+        padding: 30px 25px;
+    }
+
+    .cv-name {
+        font-size: 28px;
+    }
+
+    .cv-left-title,
+    .cv-right-title {
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+}
+
+@media print {
+
+    body {
+        background: white !important;
+    }
+
+    .navbar,
+    .masthead,
+    .cv-document + section,
+    footer {
+        display: none !important;
+    }
+
+    .cv-document {
+        margin: 0;
+        width: 210mm;
+        min-height: 297mm;
+        max-width: none;
+        box-shadow: none;
+    }
+
+    .cv-left {
+        background: #eeeeee !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
