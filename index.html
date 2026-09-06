@@ -16,9 +16,8 @@
             crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Nunito:wght@300;400;600;700;800;900&display=swap"
           rel="stylesheet">
 
     <!-- Bootstrap -->
@@ -27,119 +26,17 @@
 
     <!-- CSS -->
     <link href="css/styles.css" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: "Nunito", sans-serif;
-        }
-
-        .masthead {
-            background:
-                linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.82)),
-                #111 !important;
-        }
-
-        .masthead h1 {
-            font-weight: 800;
-            letter-spacing: .1em;
-        }
-
-        .section-title {
-            text-transform: uppercase;
-            letter-spacing: .25em;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card,
-        .info-card,
-        .experience-card {
-            border-radius: 10px;
-            padding: 30px;
-            height: 100%;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
-            transition: transform .25s ease, box-shadow .25s ease;
-        }
-
-        .skill-card:hover,
-        .info-card:hover,
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,.12);
-        }
-
-        .skill-card i {
-            font-size: 35px;
-            margin-bottom: 15px;
-            color: #64a19d;
-        }
-
-        .timeline {
-            border-left: 3px solid #64a19d;
-            padding-left: 25px;
-        }
-
-        .timeline-item {
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: "";
-            width: 13px;
-            height: 13px;
-            background: #64a19d;
-            border-radius: 50%;
-            position: absolute;
-            left: -33px;
-            top: 6px;
-        }
-
-        .timeline-year {
-            color: #64a19d;
-            font-weight: 800;
-        }
-
-        .contact-item {
-            margin-bottom: 15px;
-        }
-
-        .contact-item i {
-            width: 30px;
-            color: #64a19d;
-        }
-
-        .badge-skill {
-            display: inline-block;
-            background: #64a19d;
-            color: white;
-            padding: 8px 14px;
-            border-radius: 20px;
-            margin: 5px;
-            font-size: .9rem;
-        }
-
-        .language-list,
-        .quality-list {
-            padding-left: 20px;
-        }
-
-        .language-list li,
-        .quality-list li {
-            margin-bottom: 8px;
-        }
-    </style>
 </head>
 
 <body id="page-top">
 
 <!-- ================= NAVIGATION ================= -->
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
 
         <a class="navbar-brand" href="#page-top">
-            Zakaria Boulgarne
+            zakaria_boulgarne
         </a>
 
         <button class="navbar-toggler"
@@ -156,6 +53,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
 
             <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#cv">CV</a>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="#profil">Profil</a>
@@ -187,401 +88,429 @@
 
 <header class="masthead">
 
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <div class="container px-4 px-lg-5">
 
         <div class="text-center">
 
-            <h1 class="mx-auto my-0 text-uppercase">
+            <div class="eyebrow">
+                whoami<span class="cursor"></span>
+            </div>
+
+            <h1 class="mx-auto my-0">
                 Zakaria Boulgarne
             </h1>
 
-            <h2 class="text-white-50 mx-auto mt-3 mb-5">
+            <h2 class="mx-auto mt-3 mb-4">
                 Étudiant en BTS SIO<br>
                 Option SISR – Systèmes & Réseaux
             </h2>
 
-            <a class="btn btn-primary" href="#profil">
-                Découvrir mon profil
-            </a>
+            <div>
+                <span class="status-pill">Disponible pour un stage</span>
+            </div>
+
+            <div class="mt-3">
+                <a class="btn btn-primary" href="#profil">
+                    Voir mon profil
+                </a>
+            </div>
 
         </div>
 
+    </div>
+
+    <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
     </div>
 
 </header>
 
  <!-- ================= CV ================= -->
 
-<section id="cv" style="background:#dcdcdc; padding:40px 15px;">
+<section id="cv">
 
-    <div class="cv-document">
+    <div class="cv-window">
 
-        <!-- ================= COLONNE GAUCHE ================= -->
+        <div class="cv-titlebar">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="filename">cv_zakaria_boulgarne.txt</span>
+        </div>
 
-        <aside class="cv-left">
+        <div class="cv-document">
 
-            <!-- COMPETENCES -->
+            <!-- ================= COLONNE GAUCHE ================= -->
 
-            <div class="cv-left-section">
+            <aside class="cv-left">
 
-                <h3 class="cv-left-title">
-                    Compétences
-                </h3>
+                <!-- COMPETENCES -->
 
-                <div class="cv-left-subtitle">
-                    Maintenance & support
+                <div class="cv-left-section">
+
+                    <h3 class="cv-left-title">
+                        Compétences
+                    </h3>
+
+                    <div class="cv-left-subtitle">
+                        Maintenance & support
+                    </div>
+
+                    <ul>
+                        <li>
+                            Installation et configuration de postes Windows
+                        </li>
+
+                        <li>
+                            Diagnostic de pannes matérielles et logicielles
+                        </li>
+
+                        <li>
+                            Assistance aux utilisateurs
+                        </li>
+
+                        <li>
+                            Réinstallation système, sauvegarde et restauration
+                        </li>
+
+                        <li>
+                            Installation et configuration de postes informatiques
+                            (Windows)
+                        </li>
+                    </ul>
+
+                    <div class="cv-left-subtitle" style="margin-top:12px;">
+                        Systèmes & réseaux
+                    </div>
+
+                    <ul>
+                        <li>
+                            Windows / bases Linux
+                        </li>
+
+                        <li>
+                            Notions réseau : TCP/IP, DHCP, DNS
+                        </li>
+
+                        <li>
+                            Branchement et test réseau
+                        </li>
+
+                        <li>
+                            Sensibilisation à la cybersécurité
+                            (mots de passe, mises à jour, antivirus)
+                        </li>
+                    </ul>
+
                 </div>
 
-                <ul>
-                    <li>
-                        Installation et configuration de postes Windows
-                    </li>
 
-                    <li>
-                        Diagnostic de pannes matérielles et logicielles
-                    </li>
+                <!-- OUTILS -->
 
-                    <li>
-                        Assistance aux utilisateurs
-                    </li>
+                <div class="cv-left-section">
 
-                    <li>
-                        Réinstallation système, sauvegarde et restauration
-                    </li>
+                    <h3 class="cv-left-title">
+                        Outils
+                    </h3>
 
-                    <li>
-                        Installation et configuration de postes informatiques
-                        (Windows)
-                    </li>
-                </ul>
+                    <ul>
 
-                <div class="cv-left-subtitle" style="margin-top:12px;">
-                    Systèmes & réseaux
+                        <li>
+                            Visual Studio Code
+                        </li>
+
+                        <li>
+                            Suite Microsoft Office
+                        </li>
+
+                        <li>
+                            Environnements Windows & Linux
+                        </li>
+
+                    </ul>
+
                 </div>
 
-                <ul>
-                    <li>
-                        Windows / bases Linux
-                    </li>
 
-                    <li>
-                        Notions réseau : TCP/IP, DHCP, DNS
-                    </li>
+                <!-- CENTRES D'INTERET -->
 
-                    <li>
-                        Branchement et test réseau
-                    </li>
+                <div class="cv-left-section">
 
-                    <li>
-                        Sensibilisation à la cybersécurité
-                        (mots de passe, mises à jour, antivirus)
-                    </li>
-                </ul>
+                    <h3 class="cv-left-title">
+                        Centres d'intérêt
+                    </h3>
 
-            </div>
+                    <ul>
 
+                        <li>
+                            Maintenance informatique & réseaux
+                        </li>
 
-            <!-- OUTILS -->
+                        <li>
+                            Veille technologique (IT, cybersécurité)
+                        </li>
 
-            <div class="cv-left-section">
+                        <li>
+                            Football en compétition
+                            (R2 – esprit d'équipe)
+                        </li>
 
-                <h3 class="cv-left-title">
-                    Outils
-                </h3>
+                    </ul>
 
-                <ul>
-
-                    <li>
-                        Visual Studio Code
-                    </li>
-
-                    <li>
-                        Suite Microsoft Office
-                    </li>
-
-                    <li>
-                        Environnements Windows & Linux
-                    </li>
-
-                </ul>
-
-            </div>
+                </div>
 
 
-            <!-- CENTRES D'INTERET -->
+                <!-- CONTACT -->
 
-            <div class="cv-left-section">
+                <div class="cv-left-section">
 
-                <h3 class="cv-left-title">
-                    Centres d'intérêt
-                </h3>
+                    <h3 class="cv-left-title">
+                        Contact
+                    </h3>
 
-                <ul>
+                    <ul class="cv-contact">
 
-                    <li>
-                        Maintenance informatique & réseaux
-                    </li>
+                        <li>
+                            <i class="fas fa-location-dot"></i>
+                            <span>
+                                20 rue des Fabriques, Melun
+                            </span>
+                        </li>
 
-                    <li>
-                        Veille technologique (IT, cybersécurité)
-                    </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                zakariaboulgarne@gmail.com
+                            </span>
+                        </li>
 
-                    <li>
-                        Football en compétition
-                        (R2 – esprit d'équipe)
-                    </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>
+                                07.79.55.41.34
+                            </span>
+                        </li>
 
-                </ul>
+                        <li>
+                            <i class="fas fa-car"></i>
+                            <span>
+                                permis : B
+                            </span>
+                        </li>
 
-            </div>
+                    </ul>
 
-
-            <!-- CONTACT -->
-
-            <div class="cv-left-section">
-
-                <h3 class="cv-left-title">
-                    Contact
-                </h3>
-
-                <ul class="cv-contact">
-
-                    <li>
-                        <i class="fas fa-location-dot"></i>
-                        <span>
-                            20 rue des Fabriques, Melun
-                        </span>
-                    </li>
-
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <span>
-                            zakariaboulgarne@gmail.com
-                        </span>
-                    </li>
-
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <span>
-                            07.79.55.41.34
-                        </span>
-                    </li>
-
-                    <li>
-                        <i class="fas fa-car"></i>
-                        <span>
-                            permis : B
-                        </span>
-                    </li>
-
-                </ul>
-
-            </div>
+                </div>
 
 
-            <!-- LANGUES -->
+                <!-- LANGUES -->
 
-            <div class="cv-left-section">
+                <div class="cv-left-section">
 
-                <h3 class="cv-left-title">
-                    Langues
-                </h3>
+                    <h3 class="cv-left-title">
+                        Langues
+                    </h3>
 
-                <ul class="cv-languages">
+                    <ul class="cv-languages">
 
-                    <li>
-                        Français : courant
-                    </li>
+                        <li>
+                            Français : courant
+                        </li>
 
-                    <li>
-                        Anglais : B2
-                    </li>
+                        <li>
+                            Anglais : B2
+                        </li>
 
-                    <li>
-                        Italien : C1
-                    </li>
+                        <li>
+                            Italien : C1
+                        </li>
 
-                    <li>
-                        Espagnol : B1
-                    </li>
+                        <li>
+                            Espagnol : B1
+                        </li>
 
-                </ul>
+                    </ul>
 
-            </div>
+                </div>
 
-        </aside>
-
-
-        <!-- ================= COLONNE DROITE ================= -->
-
-        <main class="cv-right">
-
-            <!-- NOM -->
-
-            <h1 class="cv-name">
-                Zakaria Boulgarne
-            </h1>
+            </aside>
 
 
-            <!-- FORMATION -->
+            <!-- ================= COLONNE DROITE ================= -->
 
-            <div class="cv-right-section">
+            <main class="cv-right">
 
-                <h3 class="cv-right-title">
-                    Formation
-                </h3>
+                <!-- NOM -->
+
+                <h1 class="cv-name">
+                    Zakaria Boulgarne
+                </h1>
+                <span class="cv-role">Technicien maintenance informatique — BTS SIO SISR</span>
 
 
-                <div class="cv-formation-item">
+                <!-- FORMATION -->
 
-                    <strong>
-                        (2025-2027) - Première année BTS SIO
-                        (Services Informatiques aux Organisations)
-                        - (En cours)
-                    </strong>
+                <div class="cv-right-section">
 
-                    <p class="cv-school">
-                        lycée léonard de vinci, Melun 77000
+                    <h3 class="cv-right-title">
+                        Formation
+                    </h3>
+
+
+                    <div class="cv-formation-item">
+
+                        <strong>
+                            (2025-2027) - Première année BTS SIO
+                            (Services Informatiques aux Organisations)
+                            - (En cours)
+                        </strong>
+
+                        <p class="cv-school">
+                            lycée léonard de vinci, Melun 77000
+                        </p>
+
+                    </div>
+
+
+                    <div class="cv-formation-item">
+
+                        <strong>
+                            (2024-2025) - Première année BTS CIEL
+                            (Cybersécurité informatique, électronique et réseaux)
+                        </strong>
+
+                        <p class="cv-school">
+                            Lycée professionnel Galilée,
+                            Paris 13e Arrondissement
+                        </p>
+
+                    </div>
+
+
+                    <div class="cv-formation-item">
+
+                        <strong>
+                            (2023-2024) - Bac général
+                        </strong>
+
+                        <p>
+                            Option SES, Mathématique
+                        </p>
+
+                        <p class="cv-school">
+                            Jacques Amyot, Melun
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXPERIENCES -->
+
+                <div class="cv-right-section">
+
+                    <h3 class="cv-right-title">
+                        Expériences
+                    </h3>
+
+                    <ul class="cv-experiences">
+
+                        <li>
+                            Créateur de sites indépendant – 2 ans
+                        </li>
+
+                        <li>
+                            Support informatique & projets personnels – 2 ans
+                        </li>
+
+                        <li>
+                            Assistance technique auprès de clients et utilisateurs
+                        </li>
+
+                        <li>
+                            Résolution de problèmes logiciels
+                        </li>
+
+                        <li>
+                            Gestion de projets informatiques de la conception
+                            à la mise en ligne
+                        </li>
+
+                        <li>
+                            Relation client et support utilisateur
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PROFIL -->
+
+                <div class="cv-right-section">
+
+                    <h3 class="cv-right-title">
+                        Profil
+                    </h3>
+
+                    <p class="cv-profile">
+
+                        Étudiant en BTS SIO, passionné par la maintenance
+                        informatique et les réseaux. Curieux, rigoureux et autonome,
+                        je souhaite effectuer un stage en maintenance informatique
+                        afin de développer mes compétences en support utilisateur,
+                        installation de postes et diagnostic de pannes au sein d'un
+                        environnement professionnel.
+
                     </p>
 
                 </div>
 
 
-                <div class="cv-formation-item">
+                <!-- PERSONNELLES -->
 
-                    <strong>
-                        (2024-2025) - Première année BTS CIEL
-                        (Cybersécurité informatique, électronique et réseaux)
-                    </strong>
+                <div class="cv-right-section">
 
-                    <p class="cv-school">
-                        Lycée professionnel Galilée,
-                        Paris 13e Arrondissement
-                    </p>
+                    <h3 class="cv-right-title">
+                        Personnelles
+                    </h3>
+
+                    <ul class="cv-personal">
+
+                        <li>
+                            Travail en équipe (football niveau régional R2)
+                        </li>
+
+                        <li>
+                            Sens du service
+                        </li>
+
+                        <li>
+                            Autonomie
+                        </li>
+
+                        <li>
+                            Rigueur
+                        </li>
+
+                        <li>
+                            Bonne gestion des priorités
+                        </li>
+
+                        <li>
+                            Capacité d’adaptation
+                        </li>
+
+                    </ul>
 
                 </div>
 
+            </main>
 
-                <div class="cv-formation-item">
-
-                    <strong>
-                        (2023-2024) - Bac général
-                    </strong>
-
-                    <p>
-                        Option SES, Mathématique
-                    </p>
-
-                    <p class="cv-school">
-                        Jacques Amyot, Melun
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- EXPERIENCES -->
-
-            <div class="cv-right-section">
-
-                <h3 class="cv-right-title">
-                    Expériences
-                </h3>
-
-                <ul class="cv-experiences">
-
-                    <li>
-                        Créateur de sites indépendant – 2 ans
-                    </li>
-
-                    <li>
-                        Support informatique & projets personnels – 2 ans
-                    </li>
-
-                    <li>
-                        Assistance technique auprès de clients et utilisateurs
-                    </li>
-
-                    <li>
-                        Résolution de problèmes logiciels
-                    </li>
-
-                    <li>
-                        Gestion de projets informatiques de la conception
-                        à la mise en ligne
-                    </li>
-
-                    <li>
-                        Relation client et support utilisateur
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- PROFIL -->
-
-            <div class="cv-right-section">
-
-                <h3 class="cv-right-title">
-                    Profil
-                </h3>
-
-                <p class="cv-profile">
-
-                    Étudiant en BTS SIO, passionné par la maintenance
-                    informatique et les réseaux. Curieux, rigoureux et autonome,
-                    je souhaite effectuer un stage en maintenance informatique
-                    afin de développer mes compétences en support utilisateur,
-                    installation de postes et diagnostic de pannes au sein d'un
-                    environnement professionnel.
-
-                </p>
-
-            </div>
-
-
-            <!-- PERSONNELLES -->
-
-            <div class="cv-right-section">
-
-                <h3 class="cv-right-title">
-                    Personnelles
-                </h3>
-
-                <ul class="cv-personal">
-
-                    <li>
-                        Travail en équipe (football niveau régional R2)
-                    </li>
-
-                    <li>
-                        Sens du service
-                    </li>
-
-                    <li>
-                        Autonomie
-                    </li>
-
-                    <li>
-                        Rigueur
-                    </li>
-
-                    <li>
-                        Bonne gestion des priorités
-                    </li>
-
-                    <li>
-                        Capacité d’adaptation
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </main>
+        </div>
 
     </div>
 
@@ -597,7 +526,7 @@
 
             <div class="col-lg-9">
 
-                <h2 class="text-white mb-4 section-title">
+                <h2 class="section-title mb-4 justify-content-center">
                     Profil
                 </h2>
 
@@ -635,7 +564,7 @@
 
     <div class="container px-4 px-lg-5">
 
-        <h2 class="text-center section-title mb-5">
+        <h2 class="text-center section-title mb-5 justify-content-center">
             Formation
         </h2>
 
@@ -722,7 +651,7 @@
 
     <div class="container px-4 px-lg-5">
 
-        <h2 class="text-center section-title mb-5">
+        <h2 class="text-center section-title mb-5 justify-content-center">
             Compétences
         </h2>
 
@@ -733,7 +662,7 @@
 
             <div class="col-lg-4 col-md-6">
 
-                <div class="skill-card bg-light text-center">
+                <div class="skill-card text-center">
 
                     <i class="fas fa-screwdriver-wrench"></i>
 
@@ -776,7 +705,7 @@
 
             <div class="col-lg-4 col-md-6">
 
-                <div class="skill-card bg-light text-center">
+                <div class="skill-card text-center">
 
                     <i class="fas fa-network-wired"></i>
 
@@ -819,7 +748,7 @@
 
             <div class="col-lg-4 col-md-6">
 
-                <div class="skill-card bg-light text-center">
+                <div class="skill-card text-center">
 
                     <i class="fas fa-laptop-code"></i>
 
@@ -864,7 +793,7 @@
 
             <div class="col-lg-8 mx-auto">
 
-                <div class="info-card bg-light text-center">
+                <div class="info-card text-center">
 
                     <h4 class="mb-4">
                         Centres d'intérêt
@@ -901,7 +830,7 @@
 
     <div class="container px-4 px-lg-5">
 
-        <h2 class="text-center text-white section-title mb-5">
+        <h2 class="text-center section-title mb-5 justify-content-center">
             Expériences
         </h2>
 
@@ -911,7 +840,7 @@
 
             <div class="col-lg-6">
 
-                <div class="experience-card bg-light">
+                <div class="experience-card">
 
                     <h4>
                         Créateur de sites web – Freelance
@@ -951,7 +880,7 @@
 
             <div class="col-lg-6">
 
-                <div class="experience-card bg-light">
+                <div class="experience-card">
 
                     <h4>
                         Support informatique
@@ -995,7 +924,7 @@
 
             <div class="col-lg-8 mx-auto">
 
-                <div class="experience-card bg-light">
+                <div class="experience-card">
 
                     <h4>
                         Mise en pratique informatique – BTS SIO
@@ -1029,7 +958,7 @@
 
     <div class="container px-4 px-lg-5">
 
-        <h2 class="text-center section-title mb-5">
+        <h2 class="text-center section-title mb-5 justify-content-center">
             Qualités professionnelles
         </h2>
 
@@ -1085,7 +1014,7 @@
 
     <div class="container px-4 px-lg-5">
 
-        <h2 class="text-center section-title mb-5">
+        <h2 class="text-center section-title mb-5 justify-content-center">
             Langues
         </h2>
 
@@ -1093,7 +1022,7 @@
 
             <div class="col-lg-6">
 
-                <div class="info-card bg-light">
+                <div class="info-card">
 
                     <ul class="language-list">
 
@@ -1132,7 +1061,7 @@
 
     <div class="container px-4 px-lg-5 text-center">
 
-        <h2 class="text-white section-title mb-5">
+        <h2 class="section-title mb-5 justify-content-center">
             Contact
         </h2>
 
@@ -1171,7 +1100,7 @@
 
 <!-- ================= FOOTER ================= -->
 
-<footer class="footer bg-black small text-center text-white-50">
+<footer class="footer small text-center">
 
     <div class="container px-4 px-lg-5">
 
